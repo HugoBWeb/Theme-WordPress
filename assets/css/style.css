@@ -1,0 +1,513 @@
+@charset "UTF-8";
+/*
+Theme Name: festival
+Author: hbweb
+Description: Création d'un thème Wordpress pour le festival du film Burlesque.
+Version: 1.0
+Tags: responsive-layout
+*/
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+}
+
+.wrapper header {
+  background-color: #262626;
+  color: white;
+}
+
+.wrapper header h1 {
+  font-size: 1.4rem;
+}
+
+.wrapper header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1% 3%;
+}
+
+.wrapper header nav #burger .bar {
+  height: 3px;
+  width: 20px;
+  background-color: #666666;
+  margin-bottom: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.wrapper header nav #burger.active .bar:nth-child(1) {
+  -webkit-transform: rotateZ(45deg) translateX(1px) translateY(6px);
+          transform: rotateZ(45deg) translateX(1px) translateY(6px);
+}
+
+.wrapper header nav #burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.wrapper header nav #burger.active .bar:nth-child(3) {
+  -webkit-transform: rotateZ(-45deg) translateX(1px) translateY(-6px);
+          transform: rotateZ(-45deg) translateX(1px) translateY(-6px);
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper header nav #burger {
+    display: none;
+  }
+}
+
+.wrapper header nav ul {
+  width: 100%;
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper header nav ul.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper header nav ul li a {
+  text-decoration: none;
+  color: #666666;
+}
+
+.wrapper header nav ul li.current-menu-item a {
+  color: #ff4d4d;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper header nav ul {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrapper header nav ul li {
+    margin: 0 1%;
+  }
+}
+
+.wrapper section {
+  padding: 1% 20%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.wrapper section h1 {
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper section h1 {
+    font-size: 3rem;
+  }
+}
+
+.wrapper section article {
+  padding-bottom: 3%;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper section article {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+.wrapper section article img {
+  display: block;
+  width: 100%;
+}
+
+.wrapper section article h2, .wrapper section article input {
+  margin: 3%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper section article h2, .wrapper section article input {
+    font-size: 1.8rem;
+  }
+}
+
+.wrapper section article p {
+  margin: 3%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper section article p {
+    font-size: 1.6rem;
+  }
+}
+
+.wrapper section article .btn {
+  display: inline-block;
+  padding: 2%;
+  margin: 3%;
+  border-radius: 5px;
+  background-color: #262626;
+  color: white;
+  text-decoration: none;
+}
+
+.wrapper section article .btn:hover {
+  background-color: #4d4d4d;
+}
+
+.wrapper main {
+  padding: 0 5%;
+}
+
+.wrapper main.single p {
+  padding: 0 15%;
+}
+
+.wrapper main .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper main .slide figure {
+  display: block;
+}
+
+.wrapper main a {
+  text-decoration: none;
+  color: #ff4d4d;
+  font-style: italic;
+}
+
+.wrapper main .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper main .pagination a {
+  background-color: #f2f2f2;
+  display: inline-block;
+  padding: 2%;
+  margin: 0 2%;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+
+.wrapper main .pagination a:hover {
+  background-color: #e6e6e6;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper main .pagination a {
+    padding: 1%;
+  }
+}
+
+.wrapper main img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.wrapper main h1 {
+  text-align: center;
+  margin-top: 10%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper main h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper main h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.wrapper main p, .wrapper main label, .wrapper main input, .wrapper main select, .wrapper main option, .wrapper main textarea, .wrapper main li {
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper main p, .wrapper main label, .wrapper main input, .wrapper main select, .wrapper main option, .wrapper main textarea, .wrapper main li {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper main .titre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.wrapper main .titre div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper main .titre div h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.wrapper main .titre div h2 {
+  margin: 0;
+}
+
+.wrapper main article {
+  margin: 15% 0;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper main article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10% 0;
+  }
+  .wrapper main article div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+    margin: 0 2%;
+  }
+  .wrapper main article div:last-child {
+    -webkit-box-flex: 2;
+        -ms-flex: 2 2;
+            flex: 2 2;
+  }
+}
+
+.wrapper main article h2 {
+  margin: 0;
+}
+
+.wrapper main article .btn {
+  background-color: #f2f2f2;
+  display: inline-block;
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+
+.wrapper main article .btn:hover {
+  background-color: #e6e6e6;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper main article .btn {
+    padding: 1%;
+  }
+}
+
+.wrapper main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin: 5% auto;
+}
+
+.wrapper main form input {
+  width: 100%;
+}
+
+.wrapper main form input[type="submit"] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.wrapper main form select, .wrapper main form textarea {
+  width: 100%;
+}
+
+.wrapper footer {
+  margin-top: 5%;
+  padding: 2%;
+  background-color: #262626;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.wrapper footer ul {
+  padding: 0;
+  list-style: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.wrapper footer ul li {
+  color: white;
+}
+
+.wrapper footer ul li h2 {
+  color: #ff4d4d;
+  text-align: center;
+}
+
+.wrapper footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper footer ul li a:hover {
+  color: #ff4d4d;
+}
+
+.wrapper footer .ulspe ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper footer .ulspe ul li:first-child {
+  width: 100%;
+}
+
+#toTop {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  margin: 1%;
+}
+
+#toTop.active {
+  display: block;
+}
